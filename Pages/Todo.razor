@@ -14,8 +14,17 @@
     }
 </ul>
 
-<input placeholder="Something todo" @bind="newTodo" />
-<button @onclick="AddTodo">Add todo</button>
+<div class="container">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Something todo" @bind="newTodo" />
+
+        <div class="input-group-append">
+            <button @onclick="AddTodo" class="btn btn-success">Add todo</button>
+        </div>
+    </div>
+</div>
+
+
 
 @code {
     private List<TodoItem> todos = new();
